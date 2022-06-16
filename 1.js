@@ -2,11 +2,15 @@ var PI = 3.141592
 var iSteps = 16;
 var jSteps = 8;
 
-const normalize = (v) => { return v / Math.sqrt(dot(v, v)); }
+const pow = (x, y) => { return Math.pow(x, y); }
 const dot = (a, b) => { return a.x * b.x + a.y * b.y + a.z * b.z; }
+const normalize = (v) => { return v / Math.sqrt(dot(v, v)); }
 const exp = (x) => { return Math.exp(x); }
 const float = (x) => { return parseFloat(x); }
 const length = (v) => { return Math.sqrt(dot(v, v)); }
+
+const vec2 = (x, y) => { return { x: x, y: y }; }
+const vec3 = (x, y, z) => { return { x, y, z }; }
 
 const rsi = (r0, rd, sr) => {
     let a = dot(rd, rd);
